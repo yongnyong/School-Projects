@@ -1,0 +1,34 @@
+# config/text_emo_7cls.yaml
+
+data:
+  input_csv: "./data/combined.csv"   # 감정 feature 없는 통합 데이터
+  text_col: "문장"
+  label_col: "labels"
+  emotion_prefix: "emo_"           # 감정 feature 컬럼 앞에 붙일 prefix
+  max_length: 128
+  test_size: 0.2                   # 전체의 20% → valid+test
+  random_state: 42
+
+emotion:
+  model_name: "monologg/koelectra-base-v3-goemotions"
+  batch_size: 64                   # 감정 모델 추론 배치 크기
+
+model:
+  base_model_name: "klue/roberta-base"   # 여기만 바꿔서 BERT/ALBERT/ELECTRA 실험 가능
+  num_labels: 7
+  emotion_hidden_dim: 64
+
+train:
+  output_dir: "model/text_emo_7cls_roberta"
+  logging_dir: "log/text_emo_7cls_roberta"
+  num_train_epochs: 1
+  per_device_train_batch_size: 16
+  per_device_eval_batch_size: 32
+  learning_rate: 2e-5
+  weight_decay: 0.01
+  warmup_ratio: 0.1
+  logging_steps: 50
+  eval_strategy: "epoch"
+  save_strategy: "epoch"
+  metric_for_best_model: "macro_f1"
+  seed: 42
