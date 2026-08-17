@@ -1,0 +1,7 @@
+torch
+pandas
+nltk
+tqdm
+tensorboard
+selenium
+numpy
