@@ -1,6 +1,6 @@
 # School Projects Portfolio
 
-학부 과정에서 진행한 팀 프로젝트와 수상 경험을 정리한 포트폴리오 저장소입니다.  
+학부 과정에서 진행한 팀 프로젝트와 코드 기반 과제를 정리한 포트폴리오 저장소입니다.  
 단순 결과물 나열이 아니라, 각 프로젝트에서 맡은 역할, 문제 해결 과정, 사용 기술, 결과물을 함께 확인할 수 있도록 구성했습니다.
 
 ## Projects
@@ -10,7 +10,7 @@
 | [5G to 6G Network Evolution](./network-evolution-portfolio) | Network Research | 5G/6G 기술 비교, 산업 적용 사례, 네트워크 발전 방향 | 팀장, 발표자료 구성, 기술 조사 및 정리 |
 | [Ford Engine Fault Detection](./ford-engine-timeseries-portfolio) | Industrial Data Analysis | 센서 시계열 데이터 전처리, 이상 탐지, 머신러닝 모델 비교 | 데이터 전처리, 모델 실험, 결과 분석 |
 | [Pronunciation-Based Japanese Translator](./pronunciation-translator-portfolio) | AI / NLP Service | 발음 기반 일본어 번역, Seq2Seq 모델, 서비스 화면 설계 | 모델 구현, 학습 구조 설계, 발표자료 제작 |
-| [Debate Grand Prize Portfolio](./debate-award-portfolio) | Award / Debate | 온라인 플랫폼 공정화법 토론, 쟁점 분석, 논리 구성 | 토론 준비, 자료 조사, 찬성 측 논리 구성 |
+| [Korean Toxic Comment Filter](./korean-toxic-comment-filter-clean) | NLP / Text Classification | 한국어 악성 댓글 및 혐오 표현 탐지, BERT 계열 모델 비교 | 데이터 전처리, 모델 실험 구조 정리, 분류 파이프라인 구성 |
 
 ## 1. 5G to 6G Network Evolution
 
@@ -63,22 +63,23 @@ Seq2Seq 구조를 기반으로 모델 학습 흐름을 구성했고, 발표자�
 **Keywords**  
 `NLP` `Seq2Seq` `Japanese Translation` `Pronunciation` `Python` `AI Service Design`
 
-## 4. Debate Grand Prize Portfolio
+## 4. Korean Toxic Comment Filter
 
-[![Debate award photo](./debate-award-portfolio/docs/images/award-photo.png)](./debate-award-portfolio)
+[View project folder](./korean-toxic-comment-filter-clean)
 
-제12회 가톨릭대학생 토론대회에서 팀 `디벨이트`로 참가해 대상을 수상한 경험을 정리한 포트폴리오입니다.  
-온라인 플랫폼 공정화법을 중심으로 찬반 쟁점을 분석하고, 플랫폼 사업자, 입점업체, 소비자 관점을 비교하며 찬성 측 논리를 구성했습니다.
+한국어 채팅/댓글 문장에서 욕설, 혐오, 비방성 표현을 탐지하기 위한 NLP 텍스트 분류 프로젝트입니다.  
+UnSmile과 HateScore 계열 데이터를 활용해 한국어 혐오표현 분류 데이터를 구성하고, KLUE BERT/RoBERTa, ALBERT, KoELECTRA 기반 모델을 비교 실험했습니다.
 
 **Key Points**
 
-- 온라인 플랫폼 공정화법 관련 쟁점 조사
-- 입점업체 보호, 수수료, 광고비, 노출 기준 문제 분석
-- EU, 일본 등 해외 플랫폼 규제 사례 비교
-- 수상 사진, 상장, 준비자료를 함께 정리
+- 한국어 악성/혐오 댓글 탐지 문제 정의
+- UnSmile, HateScore 데이터 전처리 및 통합
+- 7-class text classification 구조 구성
+- BERT, RoBERTa, ALBERT, KoELECTRA 계열 모델 비교
+- 감정 feature를 결합한 분류 모델 실험
 
 **Keywords**  
-`Debate` `Grand Prize` `Platform Regulation` `Policy Analysis` `Argumentation` `Research`
+`NLP` `Text Classification` `Hate Speech Detection` `BERT` `KoELECTRA` `PyTorch`
 
 ## Repository Structure
 
@@ -88,7 +89,7 @@ School-Projects/
 ├── network-evolution-portfolio/
 ├── ford-engine-timeseries-portfolio/
 ├── pronunciation-translator-portfolio/
-└── debate-award-portfolio/
+└── korean-toxic-comment-filter-clean/
 ```
 
 ## About This Repository
